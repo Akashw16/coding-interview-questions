@@ -49,13 +49,12 @@ To run this project locally, follow these steps.
 1. **Clone the repository:**
 
     ```bash
-[    git clone https://github.com/yourusername/repository-name.git
-](https://github.com/Akashw16/coding-interview-questions.git)    ```
+[    git clone https://github.com/yourusername/repository-name.git]
 
 2. **Navigate to the backend directory:**
 
     ```bash
-    cd coding-interview-questions/backend
+    cd coding-interview-questions/tree/main/backend
     ```
 
 3. **Setup the database:**
@@ -90,7 +89,7 @@ To run this project locally, follow these steps.
 1. **Navigate to the frontend directory:**
 
     ```bash
-    cd coding-interview-questions/frontend
+    cd coding-interview-questions/tree/main/frontend
     ```
 
 2. **Install dependencies:**
