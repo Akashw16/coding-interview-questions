@@ -1,6 +1,3 @@
-Here's a template for a `README.md` file that you can use for your GitHub repository. This template covers both the backend and frontend parts of your project. You can customize the content as needed to fit your specific project details.
-
----
 
 # Coding Interview Questions Application
 
@@ -52,13 +49,13 @@ To run this project locally, follow these steps.
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/repository-name.git
-    ```
+[    git clone https://github.com/yourusername/repository-name.git
+](https://github.com/Akashw16/coding-interview-questions.git)    ```
 
 2. **Navigate to the backend directory:**
 
     ```bash
-    cd repository-name/backend
+    cd coding-interview-questions/backend
     ```
 
 3. **Setup the database:**
@@ -93,7 +90,7 @@ To run this project locally, follow these steps.
 1. **Navigate to the frontend directory:**
 
     ```bash
-    cd repository-name/frontend
+    cd coding-interview-questions/frontend
     ```
 
 2. **Install dependencies:**
@@ -133,7 +130,3 @@ Contributions are welcome! Please fork this repository, make your changes, and s
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README provides a comprehensive guide to your project's setup, usage, and contribution guidelines. You can modify the content to fit the specific details of your project.
