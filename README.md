@@ -49,7 +49,8 @@ To run this project locally, follow these steps.
 1. **Clone the repository:**
 
     ```bash
- git clone https://github.com/yourusername/repository-name.git
+ git clone https://github.com/Akashw16/coding-interview-questions.git
+ ```
 
 2. **Navigate to the backend directory:**
 
