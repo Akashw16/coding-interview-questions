@@ -1,0 +1,161 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Header Controls */
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: none;
+}
+
+.dark-mode .header-controls {
+  background-color: #121212;
+}
+
+/* Button styles for consistency */
+.home-button,
+.login-button,
+.theme-toggle-button,
+.username-button { /* Added username-button to the same styling group */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.home-button:hover,
+.login-button:hover,
+.theme-toggle-button:hover,
+.username-button:hover { /* Ensure the hover effect applies to username-button */
+  background-color: #45a049;
+}
+
+.dark-mode .home-button,
+.dark-mode .login-button,
+.dark-mode .theme-toggle-button,
+.dark-mode .username-button { /* Dark mode styling for username-button */
+  background-color: #4CAF50;
+}
+
+.dark-mode .home-button:hover,
+.dark-mode .login-button:hover,
+.dark-mode .theme-toggle-button:hover,
+.dark-mode .username-button:hover { /* Dark mode hover effect for username-button */
+  background-color: #45a049;
+}
+
+/* Search bar styling */
+.search-bar-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.search-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Dark mode adjustments */
+.dark-mode .search-bar {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode .search-button {
+  background-color: #5cdb5c;
+}
+
+.dark-mode .search-button:hover {
+  background-color: #4caf50;
+}
+
+.dark-mode .search-bar input {
+  background-color: #222222;
+  color: #ddd;
+  border: 1px solid #444444;
+}
+
+.dark-mode .search-bar input::placeholder {
+  color: #888888;
+}
+
+/* Adjust header sections for layout */
+.header-controls .left-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-controls .right-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
