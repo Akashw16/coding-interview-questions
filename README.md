@@ -1,4 +1,5 @@
 
+
 # Coding Interview Questions Application
 
 This repository contains both the backend and frontend code for the Coding Interview Questions application. The project allows users to view coding questions, bookmark them, and view their bookmarked questions. It is built using .NET for the backend and React for the frontend.
@@ -49,8 +50,8 @@ To run this project locally, follow these steps.
 1. **Clone the repository:**
 
     ```bash
- git clone https://github.com/Akashw16/coding-interview-questions.git
- ```
+    git clone https://github.com/Akashw16/coding-interview-questions.git
+    ```
 
 2. **Navigate to the backend directory:**
 
@@ -130,3 +131,4 @@ Contributions are welcome! Please fork this repository, make your changes, and s
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
