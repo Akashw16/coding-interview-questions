@@ -4,19 +4,27 @@ import bookmarkService from './bookmarkService.js';
 
 const QuestionAndCodeBlock = ({ questionId, code }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const [initialFetchDone, setInitialFetchDone] = useState(false);
 
   useEffect(() => {
-    const checkIfBookmarked = async () => {
+    const fetchBookmarkStatus = async () => {
       try {
-        const bookmarks = await bookmarkService.getBookmarks(localStorage.getItem('token'));
-        setIsBookmarked(bookmarks.includes(questionId));
+        if (!initialFetchDone) {
+          const bookmarks = await bookmarkService.getBookmarks();
+          if (bookmarks && bookmarks.some(bookmark => bookmark.questionId === questionId)) {
+            setIsBookmarked(true);
+          } else {
+            setIsBookmarked(false);  // Ensure proper resetting on tab switch
+          }
+          setInitialFetchDone(true);  // Mark that the initial fetch is done
+        }
       } catch (error) {
-        console.error('Error checking bookmark status:', error);
+        console.error('Error fetching bookmark status:', error);
       }
     };
 
-    checkIfBookmarked();
-  }, [questionId]);
+    fetchBookmarkStatus();
+  }, [questionId, initialFetchDone]);
 
   const handleBookmark = async () => {
     try {
@@ -25,15 +33,13 @@ const QuestionAndCodeBlock = ({ questionId, code }) => {
         setIsBookmarked(false);
         alert("Bookmark removed successfully!");
       } else {
-        const response = await bookmarkService.addBookmark({ questionId });
-        if (response) {
-          setIsBookmarked(true);
-          alert("Question bookmarked successfully!");
-        }
+        await bookmarkService.addBookmark({ questionId });
+        setIsBookmarked(true);
+        alert("Question bookmarked successfully!");
       }
     } catch (error) {
       console.error("Error during bookmarking:", error);
-      alert("An error occurred while bookmarking the question.");
+      alert("An error occurred while updating the bookmark status.");
     }
   };
 

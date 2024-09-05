@@ -1,33 +1,100 @@
-.user-dashboard {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .bookmarked-questions {
-    margin-top: 20px;
-  }
-  
-  .bookmarked-questions ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .bookmarked-questions li {
-    background-color: #f4f4f4;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .bookmarked-questions h4 {
-    margin: 0;
-  }
-  
-  .bookmarked-questions pre {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+/* Container for the entire user dashboard */
+.user-dashboard-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Heading for "Your Bookmarked Questions" */
+.user-dashboard-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Container for each question and its code block */
+.user-dashboard-question-block {
+  width: 100%;
+  max-width: 800px;
+  background-color: #2e3440;
+  color: #d8dee9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Question text in the user dashboard */
+.user-dashboard-question-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #eceff4;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Code block container */
+.user-dashboard-code-block-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.user-dashboard-code-block {
+  background-color: #3b4252;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Copy button */
+.user-dashboard-copy-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #88c0d0;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-dashboard-copy-button:hover {
+  background-color: #81a1c1;
+  transform: scale(1.1);
+}
+
+.user-dashboard-copy-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Unbookmark button styling */
+.unbookmark-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #bf616a;
+  border: none;
+  border-radius: 4px;
+  color: #2e3440;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.unbookmark-button:hover {
+  background-color: #a54242;
+  transform: scale(1.05);
+}
